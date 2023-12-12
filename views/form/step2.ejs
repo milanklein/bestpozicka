@@ -1,0 +1,15 @@
+<% layout('./layouts/form-boilerplate') %>
+
+
+<% if (sessionData) { %>
+    <% if (sessionData.contact.job === 'Zamestnanec' || sessionData.contact.job === 'Štátny zamestnanec' || sessionData.contact.job === 'Zamestnanec v zahraničí' || sessionData.contact.job === 'Živnostník / S.R.O.' || sessionData.contact.job === 'Živnostník bez IČO' || sessionData.contact.job === 'Opatrovateľ/ka - živnostník - v členskej krajine EÚ'){ %>
+        <%- include('../partials/form-partials/step2') %>
+    <% } %>
+    <% if (sessionData.contact.job === 'Opatrovateľka' || sessionData.contact.job === 'Starobný dôchodca' || sessionData.contact.job === 'Výsluhový dôchodca' || sessionData.contact.job === 'Invalidný dôchodca') { %>
+        <%- include('../partials/form-partials/step2-senior') %>
+    <% } %>
+<% } %>
+
+
+
+

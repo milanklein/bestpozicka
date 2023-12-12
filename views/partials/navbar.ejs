@@ -1,0 +1,252 @@
+<nav class="main-navbar">
+
+  <div class=" flex flex-col xl:flex-row xl:justify-between">
+    <div class="flex justify-between items-center z-40">
+      <a href="/"
+        ><img
+          src="/images/result.svg"
+          alt=""
+          class="w-[5rem] inline-block md:inline"
+          id="logo"
+      /></a>
+      <button
+        id="hamburgerAnim"
+        class="hamburger xl:hidden nav-hamburger hamburger--squeeze"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    </div>
+    <% if (!isRefinancovanie && !isAutouver && home) { %>     
+         <div
+    class="xl:flex transition ease-in-out duration-200 my-auto nav-content h-full ios-min-height bg-christmas active translate-x-full xl:translate-x-0 items-end"
+  > <div id="mobile-nav-wrapper" class="flex flex-col xl:flex-row h-full">
+      <ul
+        id="topNavBar"
+        class="text-white flex flex-col items-center justify-center xl:flex-row text-md mt-auto w-full max-w-[230px] xl:max-w-full mx-auto xl:mx-[2rem] 2xl:mx-0"
+      >
+        <li
+          class="hover:border-b border-primary mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium"
+        >
+          <a href="/">Pôžičky</a>
+        </li>
+        <li
+          class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/refinancovanie">Refinancovanie</a>
+        </li>
+        <li
+          class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/centrala">Centrála</a>
+        </li>
+        <li
+          class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/dofinancovanie">Dofinancovanie</a>
+        </li>
+        <li
+        class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+      >
+        <a href="/autouver">Autoúver</a>
+      </li>
+        <li
+          class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/o-best-pozicke">O best pôžičke</a>
+        </li>
+        <li
+          class="xl:ml-8 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/kontakt">Kontakt</a>
+        </li>
+      </ul>
+      <a
+        href="/#calculatorHome"
+        id="pozicat-button"
+        class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto xl:mx-0 xl:hidden my-[3.5rem]"
+      >
+        <span>Chcem si požičať</span>
+      </a>
+    </div>
+  </div>
+  <a
+    href="/#form"
+    class="bg-dRed text-white rounded-lg h-[54px] w-[251px] xl:flex justify-center items-center font-bold text-[20px] hidden chcem-si-pozicat-button"
+  >
+    <span>Chcem si požičať</span>
+  </a>
+</div>
+</nav><% } else if (!isRefinancovanie && !home && isAutouver) { %>
+
+      <div
+          class="xl:flex transition ease-in-out duration-200 my-auto nav-content h-full ios-min-height bg-purple active translate-x-full xl:translate-x-0 items-end"
+        > <div id="mobile-nav-wrapper" class="flex flex-col xl:flex-row h-full">
+          <ul
+            id="topNavBar"
+            class="text-white flex flex-col items-center justify-center xl:flex-row text-md mt-[25%] md:mt-auto w-full max-w-[230px] xl:max-w-full mx-auto xl:mx-[2rem] 2xl:mx-0"
+          >
+            <li
+              class="hover:border-b border-primary mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium"
+            >
+              <a href="/autouver">Autoúver</a>
+            </li>
+            <li
+              class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+            >
+              <a href="/centrala">Centrála</a>
+          </li>
+            <li
+              class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+            >
+              <a href="/o-best-pozicke">O best pôžičke</a>
+            </li>
+            <li
+              class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+            >
+              <a href="/kontakt">Kontakt</a>
+            </li>
+            <li
+              class="xl:ml-8 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+            >
+              <a href="/">Bestpôžička</a>
+            </li>
+          </ul>
+          <a
+            href="/autouver/#calculator"
+            id="pozicat-button"
+            class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[16px] mx-auto xl:mx-0 xl:hidden my-[3.5rem]"
+          >
+            <span>Chcem autoúver</span>
+          </a>
+        </div>
+      </div>
+      <a
+        href="/autouver/#form"
+        class="bg-dRed text-white rounded-lg h-[54px] w-[251px] xl:flex justify-center items-center font-bold text-[16px] hidden chcem-si-pozicat-button"
+      >
+        <span>Chcem autoúver</span>
+      </a>
+    </div>
+  </nav>
+
+  <% } else if (isBusiness) { %>
+
+    <div
+        class="xl:flex transition ease-in-out duration-200 my-auto nav-content h-full ios-min-height  active translate-x-full xl:translate-x-0 items-end"
+      > <div id="mobile-nav-wrapper" class="flex flex-col xl:flex-row h-full">
+        <ul
+          id="topNavBar"
+          class="text-white flex flex-col items-center justify-center xl:flex-row text-md mt-[25%] md:mt-auto w-full max-w-[230px] xl:max-w-full mx-auto xl:mx-[2rem] 2xl:mx-0"
+        >
+          <li
+            class="hover:border-b border-primary mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium"
+          >
+            <a href="/autouver">Autoúver</a>
+          </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/centrala">Centrála</a>
+        </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/o-best-pozicke">O best pôžičke</a>
+          </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/kontakt">Kontakt</a>
+          </li>
+          <li
+            class="xl:ml-8 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/">Bestpôžička</a>
+          </li>
+        </ul>
+        <a
+          href="/business/#calculator"
+          id="pozicat-button"
+          class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[16px] mx-auto xl:mx-0 xl:hidden my-[3.5rem]"
+        >
+          <span>Chcem úver</span>
+        </a>
+      </div>
+    </div>
+    <a
+      href="/business/#form"
+      class="bg-dGreen text-white rounded-lg h-[54px] w-[251px] xl:flex justify-center items-center font-bold text-[16px] hidden chcem-si-pozicat-button"
+    >
+      <span>Chcem úver</span>
+    </a>
+  </div>
+</nav>
+        <% } else {%>
+    
+        <div
+      class="xl:flex transition ease-in-out duration-200 my-auto nav-content h-full ios-min-height bg-secondary active translate-x-full xl:translate-x-0 items-end"
+    > <div id="mobile-nav-wrapper" class="flex flex-col xl:flex-row h-full">
+        <ul
+          id="topNavBar"
+          class="text-white flex flex-col items-center justify-center xl:flex-row text-md mt-auto w-full max-w-[230px] xl:max-w-full mx-auto xl:mx-[2rem] 2xl:mx-0"
+        >
+          <li
+            class="hover:border-b border-primary mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium"
+          >
+            <a href="/">Pôžičky</a>
+          </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/refinancovanie">Refinancovanie</a>
+          </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/centrala">Centrála</a>
+          </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/dofinancovanie">Dofinancovanie</a>
+          </li>
+          <li
+          class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+        >
+          <a href="/autouver">Autoúver</a>
+        </li>
+          <li
+            class="xl:ml-8 mb-6 xl:mb-0 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/o-best-pozicke">O best pôžičke</a>
+          </li>
+          <li
+            class="xl:ml-8 text-center xl:text-left text-[1.5rem] xl:text-[1rem] 2xl:text-[1.25rem] font-medium hover:border-b border-primary"
+          >
+            <a href="/kontakt">Kontakt</a>
+          </li>
+        </ul>
+        <a
+          href="/#calculator"
+          id="pozicat-button"
+          class="bg-dRed text-white rounded-lg h-[54px] w-[251px] flex justify-center items-center font-bold text-[20px] mx-auto xl:mx-0 xl:hidden my-[3.5rem]"
+        >
+          <span>Chcem si požičať</span>
+        </a>
+      </div>
+    </div>
+    <a
+      href="/#form"
+      class="bg-dRed text-white rounded-lg h-[54px] w-[251px] xl:flex justify-center items-center font-bold text-[20px] hidden chcem-si-pozicat-button"
+    >
+      <span>Chcem si požičať</span>
+    </a>
+  </div>
+</nav>
+        <% }%>
+    
+     

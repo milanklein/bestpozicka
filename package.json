@@ -1,0 +1,35 @@
+{
+  "name": "ahoj-pozicky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.3",
+    "express-csp-header": "^5.1.0",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.4",
+    "mv": "^2.1.1",
+    "nodemailer": "^6.7.2",
+    "numeral": "^2.0.6",
+    "semantic-ui-dropdown": "^2.4.1",
+    "semantic-ui-transition": "^2.3.1",
+    "sendmail": "^1.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.0.23"
+  }
+}

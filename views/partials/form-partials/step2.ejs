@@ -1,0 +1,155 @@
+<section
+  id="step1-body"
+  class="pb-[4.5rem] md:pb-0 form-container md:my-[5rem]"
+>
+  <div class="md:w-1/5">
+    <p class="form-label">
+      Vyplnenie údajov vám zaberie
+      <span class="text-primary font-medium">menej než 6min</span>
+    </p>
+    <div
+      class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]"
+    >
+      <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+      <img src="/images/clock.svg" alt="" class="w-5 mx-2" />
+      <p class="text-primary leading-none">6min</p>
+    </div>
+  </div>
+  <div class="md:grid md:grid-cols-2 md:gap-24 step2-bg">
+    <div
+      class="bg-white px-6 py-[3rem] md:px-0 md:py-[4rem] rounded-[10px] text-secondary w-full md:max-w-[665px] md:flex md:items-center md:justify-center"
+    >
+      <form
+        action="/form/step-2"
+        method="post"
+        class="form w-full md:max-w-[550px] relative"
+      >
+        <%- include('./back-arrow') %>
+        <div class="mb-[2rem] md:mb-[2.25rem]">
+          <label for="companyName" class="label-default"
+            >Názov spoločnosti alebo IČO</label
+          >
+          <div class="relative">
+            <input
+              type="text"
+              id="companyName"
+              class="input-default placeholder-default validate"
+              placeholder="Firma, s.r.o."
+              name="companyName"
+            />
+            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+          </div>
+          <small class="text-xs text-dRed"></small>
+        </div>
+        <div class="mb-[2rem] md:mb-[2.25rem]">
+          <label for="city" class="label-default">Obec</label>
+          <div class="relative">
+            <input
+              type="text"
+              id="city"
+              name="city"
+              class="input-default placeholder-default validate"
+              placeholder="Bratislava"
+            />
+            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+          </div>
+          <small class="text-xs text-dRed"></small>
+        </div>
+        <span class="label-default">Zamestnanie mám na dobu </span>
+        <div
+          class="mb-[2rem] md:mb-[2.25rem] border-2 border-secondary rounded-lg grid grid-cols-2 py-2 px-3"
+        >
+          <div class="flex items-center">
+            <div
+              class="border-2 border-secondary w-[18px] h-[18px] rounded-[100%] flex items-center justify-center hover:border-primary transition-default"
+              id="unspecific-radio"
+            >
+              <img
+                src="/images/icons/radioInside.svg"
+                alt=""
+                class="w-[10px] hidden"
+              />
+            </div>
+            <input type="hidden" value="neurčitú" name="period" id="period" />
+            <label
+              for="neurcita"
+              class="text-[1rem] font-bold text-secondary/30 ml-2"
+              >Neurčitú</label
+            >
+          </div>
+          <div class="border-l pl-3 flex items-center">
+            <div
+              class="border-2 border-secondary w-[18px] h-[18px] rounded-[100%] flex items-center justify-center hover:border-primary transition-default"
+              id="specific-radio"
+            >
+              <img
+                src="/images/icons/radioInside.svg"
+                alt=""
+                class="w-[10px] hidden"
+              />
+            </div>
+            <label
+              for="urcita"
+              class="text-[1rem] font-bold text-secondary/30 ml-2"
+              >Určitú</label
+            >
+          </div>
+        </div>
+        <div class="mb-[2rem] md:mb-[2.25rem] hidden radio-content">
+          <p class="label-default md:hidden">
+            V zamestnaní od - do<span
+              class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1"
+              >- Nepovinné</span
+            >
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label
+                for="from"
+                class="hidden md:block md:text-[0.875rem] font-bold md:mb-2"
+                >V zamestnaní od<span
+                  class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1"
+                  >- Nepovinné</span
+                ></label
+              >
+              <input
+                type="text"
+                id="from"
+                placeholder="01/2021"
+                class="input-default placeholder-default calendar pl-[2rem]"
+                name="from"
+              />
+            </div>
+            <div id="from-labour">
+              <label
+                for="till"
+                class="hidden md:block md:text-[0.875rem] font-bold md:mb-2"
+                >V zamestnaní do<span
+                  class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1"
+                  >- Nepovinné</span
+                ></label
+              >
+              <input
+                type="text"
+                id="till"
+                placeholder="04/2024"
+                class="input-default placeholder-default calendar pl-[2rem]"
+                name="till"
+              />
+            </div>
+          </div>
+        </div>
+
+        <%- include('last-three-months.ejs') %> <%- include('other-income.ejs')
+        %>
+
+        <button
+          class="md:ml-[6rem] md:mt-[2.5rem] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition"
+        >
+          <span>Ďalej </span>
+        </button>
+      </form>
+    </div>
+    <%- include('step2-bottomNav.ejs') %>
+  </div>
+</section>

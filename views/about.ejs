@@ -1,0 +1,133 @@
+<% layout('./layouts/boilerplate') %>
+<div class="bg-secondary">
+    <section  class="bg-secondary mb-[4.5rem] md:mb-0 md:pb-[2rem]" >
+        <div  id="about-top">
+            <div class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto text-white">
+                <div class="flex flex-col md:flex-row items-center pt-20 ">
+                    <div class="w-full md:max-w-[860px]" >
+                        <h1 class="text-[2.3rem] md:text-[4rem] mb-7 leading-[42px] md:leading-[72px]"><span
+                                    class="text-primary">Bestpôžička</span> jednoduchá cesta k peniazom</h1>
+                        <p class="w-full max-w-[350px] md:max-w-[660px] leading-[20px] md:leading-[26px] leading-tight font-light text-[1rem] md:text-[1.25rem]">
+                            Odporúčania, rady a tipy ako si jednoducho a rýchlo požičať. Niekoľkoročné skúsenosti,
+                            excelentný
+                            servis, exkluzívne riešenia, a moderný prístup k získaniu jednoduchej pôžičky.
+                            S tým všetkým vám pomôže tím bestpôžičky.
+                        </p>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-center w-full md:max-w-[760px] md:relative md:top-[2rem] md:z-40" id="about-images">
+                        <img src="/images/adrian-bg-y.png" alt="" class="w-[250px] md:w-[23rem] md:h-min md:px-7 mx-auto">
+                        <img src="/images/anton-bg-y.png" alt="" class="w-[250px] md:w-[20rem] md:h-min md:px-7 mx-auto">
+<!--                        <img src="/images/kontakt-kontaktujte/mobile-person1.png" alt="" class="md:hidden w-full max-w-[270px] mx-auto">-->
+<!--                        <img src="/images/kontakt-kontaktujte/mobile-person2.png" alt="" class="md:hidden w-full max-w-[270px] mx-auto pb-[2rem]">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/aboutUs') %>
+
+    <%- include('./partials/ad-cards') %>
+
+    <section id="about-who" class="bg-secondary mb-[4rem] md:mb-[7rem]">
+        <div class="container flex flex-col md:flex-row md:justify-between">
+            <div class="w-full md:max-w-[810px]">
+<!--                box-shadow: 9px 10px 50px 0 rgba(0,0,0,0.10);
+border-radius: 10px;-->
+                <img src="/images/who.png" alt="" class="w-full custom-shadow-10">
+            </div>
+            <div class="flex flex-col w-full md:max-w-[430px] justify-center md:items-end text-white order-first md:order-last mb-[2rem] md:mb-0 md:mr-[5rem]" id="zistit-button-receiver">
+                <h3 class="text-center md:text-left text-[2.25rem] md:text-[2.5rem] mb-[1.25rem] md:mb-[1rem] text-left w-full md:leading-[44px]">
+                    Pre koho tu sme?</h3>
+                <p class="text-center md:text-left text-[1.125rem] leading-[28px] font-text">
+                    Pre každého kto si potrebuje požičať, má rád nadštandardný servis a preferuje jednoduchú cestu k
+                    peniazom prostredníctvom bestpôžičky. Ku každému klientovi pristupujeme individuálne, náš vzťah je
+                    založený na vzájomnej dôvere a diskrétnosti.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="about-what" class="bg-secondary mb-[4rem] md:mb-[7rem]">
+        <div class="container flex flex-col md:flex-row md:justify-between">
+            <div class="flex flex-col w-full md:max-w-[430px] justify-center md:items-end text-white order-first md:order-last mb-[2rem] md:mb-0 md:ml-[5rem]">
+                <h3 class="text-center md:text-left text-[2.25rem] md:text-[2.5rem] mb-[1.25rem] md:mb-[1rem] text-left w-full md:leading-[44px]">
+                    Čo ponúkame?</h3>
+                <p class="text-center md:text-left text-[1.125rem] leading-[28px] font-text">
+                    Ponúkame Vám jednoduchú a rýchlu pôžičku, kompletné poradenstvo pri vybavovaní refinančných úverov a
+                    dofinancovanie hypoték. Odporúčania, rady a tipy ako si jednoducho a rýchlo požičať. Niekoľkoročné
+                    skúsenosti, excelentný servis, exkluzívne riešenia, a moderný prístup k získaniu
+                    jednoduchej bestpôžicky.
+                </p>
+            </div>
+            <div class="w-full md:max-w-[810px] md:order-last">
+                <img src="/images/what.png" alt="" class="w-full custom-shadow-10">
+            </div>
+        </div>
+    </section>
+    <section class="pb-[5rem] md:pb-28">
+        <div id="benefits-section-dark" class="">
+            <div class="container text-white md:px-[5rem]">
+                <div class="flex flex-col md:flex-row mb-[2rem] md:mb-6">
+                    <div class="md:mr-[2rem] border border-primary rounded-lg py-14 px-7 max-w-[88%] mx-auto md:mx-0 w-full md:max-w-[242px] text-primary bg-secondary hover:transition-all hover:bg-primary hover:text-white mb-[1.5rem] md:mb-0">
+                        <h5 class="text-xl mb-1">rýchlosť</h5>
+                        <p class="text-sm">
+                            Peniaze odosielame na účet okamžite po podpise zmluvy.
+                        </p>
+                    </div>
+                    <div class="md:mr-[2rem] border border-dRed rounded-lg py-14 mx-auto md:mx-0 px-7 max-w-[88%] w-full md:max-w-[242px] bg-secondary text-dRed hover:transition-all hover:bg-dRed hover:text-white mb-[1.5rem] md:mb-0">
+                        <h5 class="text-xl mb-1">bez poplatkov</h5>
+                        <p class="text-sm">
+                            Vybavenie, vedenie a predčasné splatenie pôžičky je úplne zadarmo.
+                        </p>
+                    </div>
+                    <div class="md:mr-[2rem] border border-white rounded-lg py-14 px-7 mx-auto md:mx-0 max-w-[88%] w-full md:max-w-[242px] bg-secondary text-white hover:transition-all hover:bg-white hover:text-secondary">
+                        <h5 class="text-xl mb-1">ústretovosť</h5>
+                        <p class="text-sm">
+                            Náš zákazník náš pán, preto sa vždy snažíme vyhovieť požiadavkám zákazníka.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 md:pl-9  order-first md:order-last">
+                        <h2 class="text-center md:text-left text-[2.5rem] md:text-6xl mb-[1.5rem] md:mb-4">Benefity</h2>
+                        <p class="text-center md:text-left text-[1.125rem] md:text-sm leading-relaxed mb-[1.5rem] md:mb-0 md:w-11/12">
+                            Komplexné služby, maximálna bezpečnosť, flexibilita a transparentnosť. Či už ste online alebo
+                            klasik,
+                            bestpôžička si nájde cestu ku každému z Vás.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:justify-end">
+                    <div class="border border-white rounded-lg py-14 px-7 bg-secondary mx-auto md:mx-0 w-[88%] w-full md:max-w-[242px] text-white hover:transition-all hover:text-secondary hover:bg-white mb-[1.5rem] md:mb-0">
+                        <h5 class="text-xl mb-1">profesionalita</h5>
+                        <p class="text-sm">
+                            Prácu vykonávame efektívne, zodpovedne dôsledne a s plným nasadením.
+                        </p>
+                    </div>
+                    <div class="md:ml-[2rem] border border-primary rounded-lg py-14 px-7 bg-secondary text-primary mx-auto md:mx-0 w-[88%] w-full md:max-w-[242px] ml-6 hover:transition-all hover:bg-primary hover:text-white mb-[1.5rem] md:mb-0">
+                        <h5 class="text-xl mb-1">komplexnosť</h5>
+                        <p class="text-sm">
+                            Komplexné služby v sprostredkovaní finančných služieb pre našich klientov.
+                        </p>
+                    </div>
+                    <div class="md:ml-[2rem] border-2 border-dRed rounded-lg py-14 px-7 bg-secondary text-dRed mx-auto md:mx-0 w-[88%] w-full md:max-w-[242px] ml-6 hover:transition-all hover:bg-dRed hover:text-white mb-[5rem] md:mb-0">
+                        <h5 class="text-xl mb-1">flexibilita</h5>
+                        <p class="text-sm">
+                            Žiadosť vybavíš online alebo osobne na centrále.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="mt-28">
+    <%- include('./partials/products') %>
+</div>
+
+
+<%- include('./partials/reviews') %>
+
+<%- include('./partials/calcAd') %>
+
+<%- include('./partials/faq') %>
+
+<%- include('./partials/contactForm') %>

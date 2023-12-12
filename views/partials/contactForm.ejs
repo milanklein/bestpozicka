@@ -1,0 +1,403 @@
+<% if (isAutouver) {%>
+<section id="contactFormContainer">
+  <div
+    id="contactFormWrapper"
+    class="container md:grid grid-cols-2 mb-[3.5rem] md:mb-28"
+  >
+    <div class="md:mt-[5rem] md:pl-[5rem] md:mr-[4rem]">
+      <h2
+        class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium md:text-[4rem] md:leading-[72px] mb-[1rem] md:mb-0 md:pt-[5rem]"
+      >
+        Kontaktujte nás
+      </h2>
+      <h3
+        class="text-[1.75rem] md:text-[2.5rem] text-center md:text-left md:leading-[44px]"
+      >
+        Pre viac informácií
+      </h3>
+      <div
+        class="flex items-center mt-[2rem] md:mt-10 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-call.svg" alt="" class="w-8 md:w-10" />
+        <a href="tel:+421918709028"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >+421 918 709 028</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-mail.svg" alt="" class="w-8 md:w-10" />
+        <a href="mailto:info@bestpozicka.sk"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >info@bestpozicka.sk</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0"
+      >
+        <img src="/images/contact-location.svg" alt="" class="w-8 md:w-10" />
+        <a href="https://goo.gl/maps/1rWxqoJDNfaWYrq16" class="pl-4 md:pl-7"
+          ><span class="text-[1.25rem] md:text-[1.75rem] font-bold"
+            >Fejova 1, 040 01 Košice</span
+          ></a
+        >
+      </div>
+    </div>
+    <div
+      id="contactFormCar"
+      class="pt-[1rem] md:pt-0 w-full md:max-w-[665px] ml-auto"
+    >
+      <div
+        class="bg-white p-7 md:p-12 rounded-[10px] md:m-[5.5rem] md:pt-[94px] md:mr-0 custom-shadow-20"
+      >
+        <form action="/form" method="post" class="form">
+          <div class="mb-6">
+            <label for="name" class="label-default">Meno a priezvisko</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="name"
+                class="input-default placeholder-default validate"
+                placeholder="Juraj Bestulič"
+                name="name"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="email" class="label-default">Email</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="email"
+                class="input-default placeholder-default validate"
+                placeholder="juraj.bestulic@gmail.com"
+                name="email"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="phoneNumber" class="label-default"
+              >Telefónne číslo</label
+            >
+            <div class="relative">
+              <input
+                type="text"
+                id="phoneNumber"
+                class="input-default placeholder-default validate"
+                placeholder="0901 234 567"
+                name="phoneNumber"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div>
+            <label for="message" class="label-default">Správa</label>
+            <div class="relative">
+              <textarea
+                name="message"
+                id="message"
+                class="input-default resize-none placeholder-default validate transition-default"
+                placeholder="Dobrý deň,..."
+                rows="3"
+              ></textarea>
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <span class="text-[0.75rem] text-secondary/50 mt-[1rem]"
+            >S odoslaním formuláru súhlasím s podmienkami o
+            <a
+              class="underline decoration-solid"
+              href="/dokumenty/Ochrana%20osobných%20údajov%20(GDPR).pdf"
+              >ochrane osobných údajov</a
+            ></span
+          >
+          <div class="flex justify-center mt-[2.5rem]">
+            <button
+              class="bg-dRed text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center text-[20px] font-bold form-send-button"
+            >
+              <span>Odoslať</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<% } else if (isBusiness) {%>
+<section id="contactFormContainerBusiness">
+  <div
+    id="contactFormWrapper"
+    class="container md:grid grid-cols-2 mb-[3.5rem] md:mb-28"
+  >
+    <div class="md:mt-[5rem] md:pl-[5rem] md:mr-[4rem]">
+      <h2
+        class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium md:text-[4rem] md:leading-[72px] mb-[1rem] md:mb-0 md:pt-[5rem]"
+      >
+        Kontaktujte nás
+      </h2>
+      <h3
+        class="text-[1.75rem] md:text-[2.5rem] text-center md:text-left md:leading-[44px]"
+      >
+        Pre viac informácií
+      </h3>
+      <div
+        class="flex items-center mt-[2rem] md:mt-10 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-call.svg" alt="" class="w-8 md:w-10" />
+        <a href="tel:+421944766999"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >+421 944 766 999</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-mail.svg" alt="" class="w-8 md:w-10" />
+        <a href="mailto:info@bestpozicka.sk"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >info@bestpozicka.sk</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0"
+      >
+        <img src="/images/contact-location.svg" alt="" class="w-8 md:w-10" />
+        <a href="https://goo.gl/maps/1rWxqoJDNfaWYrq16"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >Fejova 1, 040 01 Košice</span
+          ></a
+        >
+      </div>
+    </div>
+    <div
+      id="contactForm"
+      class="pt-[1rem] md:pt-0 w-full md:max-w-[665px] ml-auto"
+    >
+      <div
+        class="bg-white p-7 md:p-12 rounded-[10px] md:m-[5.5rem] md:pt-[94px] md:mr-0 custom-shadow-20"
+      >
+        <form action="/form" method="post" class="form">
+          <div class="mb-6">
+            <label for="name" class="label-default">Meno a priezvisko</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="name"
+                class="input-default placeholder-default validate"
+                placeholder="Juraj Bestulič"
+                name="name"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="email" class="label-default">Email</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="email"
+                class="input-default placeholder-default validate"
+                placeholder="juraj.bestulic@gmail.com"
+                name="email"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="phoneNumber" class="label-default"
+              >Telefónne číslo</label
+            >
+            <div class="relative">
+              <input
+                type="text"
+                id="phoneNumber"
+                class="input-default placeholder-default validate"
+                placeholder="0901 234 567"
+                name="phoneNumber"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div>
+            <label for="message" class="label-default">Správa</label>
+            <div class="relative">
+              <textarea
+                name="message"
+                id="message"
+                class="input-default resize-none placeholder-default validate transition-default"
+                placeholder="Dobrý deň,..."
+                rows="3"
+              ></textarea>
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <span class="text-[0.75rem] text-secondary/50 mt-[1rem]"
+            >S odoslaním formuláru súhlasím s podmienkami o
+            <a
+              class="underline decoration-solid"
+              href="/dokumenty/Ochrana%20osobných%20údajov%20(GDPR).pdf"
+              >ochrane osobných údajov</a
+            ></span
+          >
+          <div class="flex justify-center mt-[2.5rem]">
+            <button
+              class="bg-dGreen text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center text-[20px] font-bold form-send-button"
+            >
+              <span>Odoslať</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<%} else {%>
+<section id="contactFormContainer">
+  <div
+    id="contactFormWrapper"
+    class="container md:grid grid-cols-2 mb-[3.5rem] md:mb-28"
+  >
+    <div class="md:mt-[5rem] md:pl-[5rem] md:mr-[4rem]">
+      <h2
+        class="text-[2.5rem] text-center md:text-left leading-[44px] font-medium md:text-[4rem] md:leading-[72px] mb-[1rem] md:mb-0 md:pt-[5rem]"
+      >
+        Kontaktujte nás
+      </h2>
+      <h3
+        class="text-[1.75rem] md:text-[2.5rem] text-center md:text-left md:leading-[44px]"
+      >
+        Pre viac informácií
+      </h3>
+      <div
+        class="flex items-center mt-[2rem] md:mt-10 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-call.svg" alt="" class="w-8 md:w-10" />
+        <a href="tel:+421944766999"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >+421 944 766 999</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0"
+      >
+        <img src="/images/contact-mail.svg" alt="" class="w-8 md:w-10" />
+        <a href="mailto:info@bestpozicka.sk"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >info@bestpozicka.sk</span
+          ></a
+        >
+      </div>
+      <div
+        class="flex items-center mt-[1rem] md:mt-5 w-[73%] mx-auto md:w-full md:mx-0 mb-[1rem] md:mb-0"
+      >
+        <img src="/images/contact-location.svg" alt="" class="w-8 md:w-10" />
+        <a href="https://goo.gl/maps/1rWxqoJDNfaWYrq16"
+          ><span class="ml-4 md:ml-7 text-[1.25rem] md:text-[1.75rem] font-bold"
+            >Fejova 1, 040 01 Košice</span
+          ></a
+        >
+      </div>
+    </div>
+    <div
+      id="contactForm"
+      class="pt-[1rem] md:pt-0 w-full md:max-w-[665px] ml-auto"
+    >
+      <div
+        class="bg-white p-7 md:p-12 rounded-[10px] md:m-[5.5rem] md:pt-[94px] md:mr-0 custom-shadow-20"
+      >
+        <form action="/form" method="post" class="form">
+          <div class="mb-6">
+            <label for="name" class="label-default">Meno a priezvisko</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="name"
+                class="input-default placeholder-default validate"
+                placeholder="Juraj Bestulič"
+                name="name"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="email" class="label-default">Email</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="email"
+                class="input-default placeholder-default validate"
+                placeholder="juraj.bestulic@gmail.com"
+                name="email"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div class="mb-6">
+            <label for="phoneNumber" class="label-default"
+              >Telefónne číslo</label
+            >
+            <div class="relative">
+              <input
+                type="text"
+                id="phoneNumber"
+                class="input-default placeholder-default validate"
+                placeholder="0901 234 567"
+                name="phoneNumber"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <div>
+            <label for="message" class="label-default">Správa</label>
+            <div class="relative">
+              <textarea
+                name="message"
+                id="message"
+                class="input-default resize-none placeholder-default validate transition-default"
+                placeholder="Dobrý deň,..."
+                rows="3"
+              ></textarea>
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+          </div>
+          <span class="text-[0.75rem] text-secondary/50 mt-[1rem]"
+            >S odoslaním formuláru súhlasím s podmienkami o
+            <a
+              class="underline decoration-solid"
+              href="/dokumenty/Ochrana%20osobných%20údajov%20(GDPR).pdf"
+              >ochrane osobných údajov</a
+            ></span
+          >
+          <div class="flex justify-center mt-[2.5rem]">
+            <button
+              class="bg-dRed text-white rounded-lg w-[251px] h-[54px] flex items-center justify-center text-[20px] font-bold form-send-button"
+            >
+              <span>Odoslať</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>

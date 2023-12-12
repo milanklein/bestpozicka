@@ -1,0 +1,1381 @@
+
+    
+      <% if (!isRefinancovanie && !isAutouver && !isBusiness) { %>
+       <div class="bg-christmas pt-[3.5rem] md:pt-12 relative z-8" id="form">
+  <div class="top-[200px] relative"><img class="waves" src="/images/wave1.svg" alt=""><img class="waves" src="/images/wave2.svg" alt=""></div>
+  <section
+    class="md:w-full lg:max-w-[1620px] md:flex md:align-middle mx-[1rem] md:px-[2rem] 3xl:px-0 md:mx-auto md:mt-[20px] calc-wrapper-main mb-[6rem] gap-[40px]"
+  > 
+  <div
+      class="text-white w-full md:max-w-[66%] md:h-full bg-y-sm md:mt-[20px]"
+      id="heroTextHome"
+    >
+      <h1
+        class="text-[37px] md:text-[42px] pr-4 mb-6 md:mb-[2rem] leading-tight md:leading-[46px] font-bold max-w-[280px]"
+      >
+        Bestpôžička pre každého
+        <span class="text-primary"
+          >s čerpaním <br />
+          už do 24 hodín </span
+        ><br />na
+        <span class="text-primary">čokoľvek</span>
+      </h1>
+      <h2
+        class="text-[1.5rem] md:text-[2px] mb-6 md:mb-[2rem] leading-[30px]  md:max-w-[600px]"
+      >
+     Požičajte si na čokoľvek:
+      </h2>
+      <div class="flex flex-row mb-5">
+        <div
+          class="flex flex-col items-center font-[1rem] md:text-[1.25rem] md:max-w-[460px] mr-4"
+        >
+          <p class="">&#127958;</p>
+          <p class="">🏡</p>
+          <p class="">👨‍👩‍👧‍</p>
+          <p class="">💚</p>
+        </div>
+        <div
+          class="flex flex-col items-start md:w-2/3 font-[1rem] md:text-[1.25rem] font-light md:max-w-[460px]"
+        >
+          <p class="">Dovolenka</p>
+          <p class="">Rekonštrukcia bytu/domu</p>
+          <p class="">Rodinné výdavky</p>
+          <p class="">Zdravie a wellness</p>
+          <p class="text-primary">alebo čokoľvek iné</p>
+        </div>
+      </div>
+      <a
+        href="/#calculatorHome"
+        id="heroCtaButton"
+        class="text-center md:text-[20px] md:text-left flex flex-col md:inline-block ml-7"
+      >
+        Vypočítať
+        <i
+          class="fa-solid text-[1.25rem] fa-angle-down fa-1x text-dRed md:hidden"
+        ></i>
+      </a>
+    </div>
+    <div
+      class="mt-[-570px] translate-y-[602px] mb-[640px] md:translate-y-[0] md:mb-[0] w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] z-10  md:mt-[20px]"
+      id="calculatorHome"
+    >
+      <% } else if (!isRefinancovanie && isAutouver) { %>
+
+        <div class="bg-purple pt-[3.5rem] md:pt-16 relative " id="form">
+          <section
+            class="md:w-full lg:max-w-[1620px] md:flex md:align-middle mx-[1rem] md:px-[2rem] 3xl:px-0 md:mx-auto mt-[-25px] calc-wrapper-main autouverCalculator "
+          >
+    <div
+      class=" mt-[-570px] translate-y-[602px] mb-[640px] md:translate-y-[0] md:mb-[0] w-full md:max-w-[665px] mx-auto text-secondary md:h-full md:max-h-[940px] z-40 md:mt-[90px]"
+      id="calculator"
+    >
+    <img id="calc_img" src="/images/bmw.png" alt="">
+    <form action="/calcCar" method="post" class="calc-form">
+      <input type="hidden" name="type" value="autoúver" />
+      <div
+        class="md:ml-[100px] bg-white md:w-[70%] h-[670px] px-[1.5rem] py-[2rem] md:p-8 rounded-lg default-shadow md:px-[2.5rem] md:py-[3.5rem] custom-shadow-20"
+      >
+        <div class="mb-4">
+          <h3 class="mb-[1rem] text-[1.5rem] md:text-[20px] font-bold">
+            Koľko si chcete požičať?
+          </h3>
+          <div class="relative">
+            <input
+              type="text"
+              id="money_input_auto"
+              name="money"
+              class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+              placeholder="15 000 €"
+            />
+            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+          </div>
+          <small class="text-xs text-dRed"></small>
+          <input
+            type="range"
+            class="w-full styled-slider slider-progress mt-[1rem]"
+            min="1000"
+            max="30000"
+            value="14000"
+            step="1000"
+            id="money_range_auto"
+          />
+        </div>
+        <div class="mb-4">
+          <h3 class="text-[1.5rem] md:text-[20px] font-bold">
+            Doba splácania?  
+          </h3>
+        <span class="calc-new-span text-[16px]">Vždy môžete zaplatiť rýchlejšie.</span>
+          <div class="relative">
+            <input
+              type="text"
+              id="year_input_auto"
+              name="years"
+              class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+              placeholder="16 mesiacov"
+            />
+            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+          </div>
+          <small class="text-xs text-dRed"></small>
+          <input
+            type="range"
+            class="w-full styled-slider slider-progress mt-[1rem]"
+            min="12"
+            max="96"
+            value="16"
+            id="year_range_auto"
+            step="1"
+          />
+        </div>
+        <hr class="mb-2" />
+        <div class="flex justify-between items-center mb-4">
+          <h4
+            class="max-w-[160px] md:max-w-[226px] text-[1.25rem] md:text-[24px] md:leading-[32px] font-bold"
+          >
+            Odhadovaná mesačná suma
+          </h4>
+          <h2 class="text-[1.75rem] md:text-[2.5rem] font-bold" id="mes_sum_auto">
+            389€
+          </h2>
+        </div>
+        <div>
+          <p class="font-bold text-[14px] md:text-[18px] md:mt-[1rem]">
+            Vybavte si výhodný <span class="text-primary">autoúver</span> už dnes a
+            <span class="text-primary">bez poplatkov.</span>
+          </p>
+        </div>
+        <hr class="mt-8 md:mt-[1rem]" />
+        <div class="flex mt-[1rem] text-white">
+          <input type="hidden" name="interest" id="interest" />
+          <button
+            class="w-full bg-yellow text-center h-[3.75rem] md:h-[56px] md:text-[18px] rounded-md big-pozicat-button"
+            type="submit"
+            id="testButton"
+          >
+            <span> Požiadajte o autoúver </span>
+          </button>
+        </div>
+        <p
+          class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25"
+        >
+          Reprezentatívny príklad:<br />
+          Celková výška a mena úveru (S):
+          <span id="exampleSum">10 000</span> €, fixná efektívna úroková
+          sadzba: <span id="examplePercentage">16,90</span> % p. a., výška
+          mesačnej splátky: <span id="exampleMonthly">901,94</span> €, počet
+          splátok (n): <span id="exampleLength">12</span> mesiacov. Celková
+          čiastka: <span id="exampleFinal">10 823,28</span> €, RPMN (X): 10,02
+          %
+        </p>
+      </div>
+    </form>
+  </div>
+  <% } else if (isBusiness) { %>
+
+    <div class="bg-secondary pt-[3.5rem] md:pt-16 relative " id="form">
+      <section
+        class="md:w-full lg:max-w-[1620px] md:flex md:align-middle mx-[1rem] md:px-[2rem] 3xl:px-0 md:mx-auto mt-[-25px] calc-wrapper-main autouverCalculator "
+      >
+<div
+  class="mt-[-570px] translate-y-[602px] mb-[640px] md:translate-y-[0] md:mb-[0] w-full md:max-w-[665px] mx-auto text-secondary md:h-full md:max-h-[940px] z-40 md:mt-[70px]"
+  id="calculator-business"
+>
+<form action="/calcCar" method="post" class="calc-form">
+  <input type="hidden" name="type" value="autoúver" />
+  <div
+    class="md:ml-[100px] bg-white md:w-[86%] h-[670px] px-[2.5rem] py-[2.5rem] md:p-8 rounded-lg default-shadow md:px-[2.5rem] md:py-[3.5rem] custom-shadow-20"
+  >
+    <div class="mb-4">
+      <h3 class="mb-[1rem] text-[1.5rem] md:text-[20px] font-bold">
+        Koľko si chcete požičať?
+      </h3>
+      <div class="relative">
+        <input
+          type="text"
+          id="money_input_auto"
+          name="money"
+          class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+          placeholder="15 000 €"
+        />
+        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+      </div>
+      <small class="text-xs text-dRed"></small>
+      <input
+        type="range"
+        class="w-full styled-slider-green slider-progress mt-[1rem]"
+        min="1000"
+        max="30000"
+        value="14000"
+        step="1000"
+        id="money_range_auto"
+      />
+    </div>
+    <div class="mb-4">
+      <h3 class="text-[1.5rem] md:text-[20px] font-bold">
+        Doba splácania?  
+      </h3>
+    <span class="calc-new-span text-[16px]">Vždy môžete zaplatiť rýchlejšie.</span>
+      <div class="relative">
+        <input
+          type="text"
+          id="year_input_auto"
+          name="years"
+          class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+          placeholder="16 mesiacov"
+        />
+        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+      </div>
+      <small class="text-xs text-dRed"></small>
+      <input
+        type="range"
+        class="w-full styled-slider-green slider-progress mt-[1rem]"
+        min="12"
+        max="96"
+        value="16"
+        id="year_range_auto"
+        step="1"
+      />
+    </div>
+    <hr class="mb-2" />
+    <div class="flex justify-between items-center mb-4">
+      <h4
+        class="max-w-[160px] md:max-w-[226px] text-[1.25rem] md:text-[24px] md:leading-[32px] font-bold"
+      >
+        Odhadovaná mesačná suma
+      </h4>
+      <h2 class="text-[1.75rem] md:text-[2.5rem] font-bold" id="mes_sum_auto">
+        389€
+      </h2>
+    </div>
+    <div>
+      <p class="font-bold text-[14px] md:text-[18px] md:mt-[1rem]">
+        Vybavte si výhodný <span class="turquoise">autoúver</span> už dnes a
+        <span class="turquoise">bez poplatkov.</span>
+      </p>
+    </div>
+    <hr class="mt-8 md:mt-[1rem]" />
+    <div class="flex mt-[1rem] text-white">
+      <input type="hidden" name="interest" id="interest" />
+      <button
+        class="w-full bg-dGreen text-center h-[3.75rem] md:h-[56px] md:text-[18px] rounded-md big-pozicat-button"
+        type="submit"
+        id="testButton"
+      >
+        <span> Požiadajte o autoúver </span>
+      </button>
+    </div>
+    <p
+      class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25"
+    >
+      Reprezentatívny príklad:<br />
+      Celková výška a mena úveru (S):
+      <span id="exampleSum">10 000</span> €, fixná efektívna úroková
+      sadzba: <span id="examplePercentage">16,90</span> % p. a., výška
+      mesačnej splátky: <span id="exampleMonthly">901,94</span> €, počet
+      splátok (n): <span id="exampleLength">12</span> mesiacov. Celková
+      čiastka: <span id="exampleFinal">10 823,28</span> €, RPMN (X): 10,02
+      %
+    </p>
+  </div>
+</form>
+</div>
+
+      <% } else { %>
+        <div class="bg-secondary pt-[3.5rem] md:pt-16 relative" id="form">
+          <section
+            class="md:w-full lg:max-w-[1620px] md:flex md:align-middle mx-[1rem] md:px-[2rem] 3xl:px-0 md:mx-auto mt-0 calc-wrapper-main"
+          >
+        <div
+      class="text-white w-full md:max-w-[66%] md:h-full bg-y-sm md:mt-[90px]"
+      id="heroText"
+    >
+      <h1
+        class="hero-h1 text-[37px] md:text-[4rem] mb-6 md:mb-[2rem] leading-tight md:leading-none font-bold"
+      >
+        Uzatvorte
+        <span class="text-primary">bestpôžičku rýchlo a jednoducho online </span
+        >a splňte si vaše želanie!
+      </h1>
+      <h2
+        class="hero-h2 text-[1.5rem] md:text-3xl mb-6 md:mb-[2rem] leading-[27px] max-w-[220px] md:max-w-[unset]"
+      >
+        Jednoduchá cesta k peniazom
+      </h2>
+      <p
+        class="md:w-2/3 mb-[2rem] font-[1rem] md:text-[1.25rem] font-light md:max-w-[460px]"
+      >
+        V Bestpôžičke môžete
+        <span class="font-bold"
+          >refinancovať pôžičky v rozmedzí od 400 do 25 000 EUR.</span
+        >
+      </p>
+      <a
+        href="/#calculator"
+        id="heroCtaButton"
+        class="text-center md:text-[20px] md:text-left flex flex-col md:inline-block ml-7"
+      >
+        Vypočítať
+        <i
+          class="fa-solid text-[1.25rem] fa-angle-down fa-1x text-dRed md:hidden"
+        ></i>
+      </a>
+    </div>
+    <div
+      class="mt-[-570px] translate-y-[602px] mb-[640px] md:translate-y-[0] md:mb-[0] w-full md:max-w-[665px] ml-auto text-secondary md:h-full md:max-h-[940px] z-40 md:mt-[90px]"
+      id="calculator"
+    >
+    
+      <% } %> <% if (!isRefinancovanie && !isAutouver && !isBusiness) { %>
+      <form id="pozadie" action="/calc" method="post" class="calc-form">
+        <input type="hidden" name="type" value="pôžičku" />
+        <div
+          class="bg-white md:w-[70%] h-[670px] px-[1.5rem] py-[2rem] md:p-8 rounded-lg default-shadow md:px-[2.5rem] md:py-[3.5rem] custom-shadow-20"
+        >
+          <div class="mb-4">
+            <h3 class="mb-[1rem] text-[1.5rem] md:text-[20px] font-bold">
+              Koľko si chcete požičať?
+            </h3>
+            <div class="relative">
+              <input
+                type="text"
+                id="money_input"
+                name="money"
+                class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+                placeholder="4400 €"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+            <input
+              type="range"
+              class="w-full styled-slider slider-progress mt-[1rem]"
+              min="400"
+              max="15000"
+              value="4400"
+              step="100"
+              id="money_range"
+            />
+          </div>
+          <div class="mb-4">
+            <h3 class="text-[1.5rem] md:text-[20px] font-bold">
+              Doba splácania?
+            </h3>
+            <span class="calc-new-span text-[16px]">Vždy môžete zaplatiť rýchlejšie.</span>
+            <div class="relative">
+              <input
+                type="text"
+                id="year_input"
+                name="years"
+                class="input-default placeholder-default md:h-[34px] md:text-[18px] validate-calculator"
+                placeholder="80 mesiacov"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+            <input
+              type="range"
+              class="w-full styled-slider slider-progress mt-[1rem]"
+              min="12"
+              max="96"
+              value="80"
+              id="year_range"
+              step="1"
+            />
+          </div>
+          <hr class="mb-2" />
+          <div class="flex justify-between items-center mb-4">
+            <h4
+              class="max-w-[160px] md:max-w-[226px] text-[1.25rem] md:text-[24px] md:leading-[32px] font-bold"
+            >
+              Odhadovaná mesačná suma
+            </h4>
+            <h2 class="text-[1.75rem] md:text-[2.5rem] font-bold" id="mes_sum">
+              102,88€
+            </h2>
+          </div>
+          <div>
+            <p class="font-bold text-[14px] md:text-[18px] md:mt-[1rem]">
+              Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už dnes a
+              <span class="text-dRed">bez poplatkov</span>
+            </p>
+          </div>
+          <hr class="mt-8 md:mt-[1rem]" />
+          <div class="flex mt-[1rem] text-white">
+            <input type="hidden" name="interest" id="interest" />
+            <button
+              class="w-full bg-dRed text-center h-[3.75rem] md:h-[56px] md:text-[18px] rounded-md big-pozicat-button"
+              type="submit"
+              id="testButton"
+            >
+              <span> Požiadajte o pôžičku </span>
+            </button>
+          </div>
+          <p
+            class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25"
+          >
+            Reprezentatívny príklad:<br />
+            Celková výška a mena úveru (S):
+            <span id="exampleSum">2 500</span> €, fixná efektívna úroková
+            sadzba: <span id="examplePercentage">21,10</span> % p. a., výška
+            mesačnej splátky: <span id="exampleMonthly">51,01</span> €, počet
+            splátok (n): <span id="exampleLength">96</span> mesiacov. Celková
+            čiastka: <span id="exampleFinal">4 896,96</span> €, RPMN (X): 21,10 %
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+      <% } else if (!isRefinancovanie && isAutouver) { %>
+        <div
+        class="text-white w-full md:max-w-[50%]  md:h-full bg-y-sm md:mt-[90px] md:ml-[20px]"
+        id="heroText"
+      ><h2
+        class="text-[1.5rem] md:text-[22px] mb-6 md:mb-[2rem] leading-[27px] max-w-[220px] md:max-w-[unset]"
+      >
+        Nové auto si môžete dovoliť už dnes!
+      </h2>
+        <h1
+        class=" text-[37px] md:text-[42px] mb-6 md:mb-[2rem] leading-tight md:leading-[46px] font-bold"
+      >
+        <span class="text-primary">Výhodné financovanie vášho nového
+        vozidla do 24 hodín.</span>
+      </h1>
+      
+      <p
+        class="md:w-2/3 mb-[2rem] font-[1rem] md:text-[1.25rem] font-light md:max-w-[460px]"
+      >
+        V Bestpôžičke môžete požiadať o autoúver v rozmedzí od 1000 do 30 000
+        EUR.
+      </p>
+      <a
+        href="/autouver/#calculator"
+        id="heroCtaButton"
+        class="text-center border-yellow md:text-[20px] md:text-left flex flex-col md:inline-block border-2 rounded-md py-2 px-8"
+      >
+        Vypočítať
+        <i
+          class="fa-solid text-[1.25rem] fa-angle-down fa-1x text-dRed md:hidden"
+        ></i>
+      </a>
+    </div></section>
+    <% } else if (isBusiness) { %>
+      <div
+      class="text-white w-full md:max-w-[50%]  md:h-full bg-y-sm md:mt-[70px] md:ml-[20px]"
+      id="heroText"
+    ><h2
+      class="text-[1.5rem] text-uppercase md:text-[20px] mb-6 md:mb-[2rem] leading-[27px] max-w-[220px] md:max-w-[unset] font-bold"
+    >
+    Prostriedky pre vaše podnikanie hneď  
+    </h2>
+      <h1
+      class="max-w-[70%] text-[37px] md:text-[42px] mb-6 md:mb-[2rem] leading-tight md:leading-[46px] font-bold"
+    >
+      <span class="turquoise">Výhodné financovanie vášho nového
+      vozidla do 24 hodín.</span>
+    </h1>
+    
+    <p
+      class="md:w-2/3 mb-[2rem] font-[1rem] md:text-[1.25rem] font-light md:max-w-[460px]"
+    >
+      V Bestpôžičke môžete požiadať o autoúver v rozmedzí od 1000 do 30 000
+      EUR.
+    </p>
+    <a
+      href="/business/#calculator-business"
+      id="heroCtaButton"
+      class="text-center border-green md:text-[20px] md:text-left flex flex-col md:inline-block border-2 rounded-md py-2 px-8"
+    >
+      Vypočítať
+      <i
+        class="fa-solid text-[1.25rem] fa-angle-down fa-1x text-dRed md:hidden"
+      ></i>
+    </a>
+  </div></section>
+    >
+      <% } else { %>
+      <form action="/calc" method="post" class="calc-form">
+        <input type="hidden" name="type" value="refinancovanie" />
+        <div
+          class="bg-white px-[1.5rem] py-[2.5rem] md:p-12 rounded-lg custom-shadow-20 md:px-[3.5rem] md:py-[4.5rem]"
+        >
+          <div class="mb-8">
+            <h3 class="mb-[1rem] text-[1.5rem] md:text-[34px] font-bold">
+              Koľko chcete refinancovať?
+            </h3>
+            <div class="relative">
+              <input
+                type="text"
+                id="money_input_ref"
+                name="money"
+                class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]"
+                placeholder="7 000€"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+            <!--                            <input type="text" class="input-default placeholder-default validate"-->
+            <!--                                   placeholder="15 000€" id="money_input" name="money">-->
+            <input
+              type="range"
+              class="w-full styled-slider slider-progress mt-[1rem]"
+              min="400"
+              max="25000"
+              value="2000"
+              step="100"
+              id="money_range_ref"
+            />
+          </div>
+          <div class="mb-8">
+            <h3 class="text-[1.5rem] md:text-[34px] font-bold">
+              Doba splácania?
+            </h3>
+            <span class="calc-new-span">Vždy môžete zaplatiť rýchlejšie.</span>
+            <div class="relative">
+              <input
+                type="text"
+                id="year_input_ref"
+                name="years"
+                class="input-default placeholder-default validate-calculator md:h-[52px] md:text-[24px]"
+                placeholder="16 mesiacov"
+              />
+              <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+            </div>
+            <small class="text-xs text-dRed"></small>
+            <input
+              type="range"
+              class="w-full styled-slider slider-progress mt-[1rem]"
+              min="12"
+              max="96"
+              value="16"
+              id="year_range_ref"
+              step="1"
+            />
+          </div>
+          <hr class="mb-8" />
+          <div class="flex justify-between items-center mb-5">
+            <h4
+              class="max-w-[160px] md:max-w-[226px] text-[1.25rem] md:text-[28px] md:leading-[32px] font-bold"
+            >
+              Odhadovaná mesačná suma
+            </h4>
+            <h2
+              class="text-[1.75rem] md:text-[2.5rem] font-bold"
+              id="mes_sum_ref"
+            >
+              389€
+            </h2>
+          </div>
+          <div>
+            <p class="font-bold text-[14px] md:text-[20px] md:mt-[2.5rem]">
+              Vybavte si rýchlu <span class="text-dRed">pôžičku</span> už dnes a
+              <span class="text-dRed">bez poplatkov</span>
+            </p>
+          </div>
+          <hr class="mt-8 md:mt-[2.5rem]" />
+          <div class="flex mt-[1rem] text-white">
+            <input type="hidden" name="interest" id="interest" />
+            <button
+              class="w-full bg-dRed text-center h-[3.5rem] md:h-[84px] md:text-[24px] rounded-md big-pozicat-button"
+              type="submit"
+              id="testButton"
+            >
+              <span> Požiadajte o pôžičku </span>
+            </button>
+          </div>
+          <p
+            class="text-[0.75rem] md:text-[14px] md:leading-[20px] mt-[1rem] text-black/25"
+          >
+            Reprezentatívny príklad:<br />
+            Celková výška a mena úveru (S):
+            <span id="exampleSum2">5000</span> €, fixná efektívna úroková
+            sadzba: <span id="examplePercentage2">21,10</span> % p. a., výška
+            mesačnej splátky: <span id="exampleMonthly2">102,02</span> €, počet
+            splátok (n): <span id="exampleLength2">96</span> mesiacov. Celková
+            čiastka: <span id="exampleFinal2">9 793,92</span> €, RPMN (X): 21,10
+            %
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+      <% } %>
+
+      <% if (!isAutouver && !isBusiness) { %>
+   
+  <div class="hidden md:block w-full z-10 -mt-36 bg-white">
+    <div class="calculator-gray-bg"> <section class="relative -top-20" id="card-wrapper">
+        <div id="ReviewsWrapper" class="ReviewsWrapper">
+          <div id="ReviewsWrappered"></div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person12.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Marián K.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Rýchle a seriózne jednanie. Chválim ochotu obchodníka.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person9.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Stanislav Č.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Všetko OK.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person7.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Daniel B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Jednoduchý formulár, zmluva mi prišla poštou, peniaze už
+                      mám na účte. Ďakujem
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person5.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Oldrich B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Zmluva bola rýchlo schválená vo výške ktorú som
+                      potreboval.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person3.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">František K.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Telefonicky mi odporučili refinanc, skvelá voľba. Ďakujem
+                      za odporúčanie
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person2.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Jozef I.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Prvá stránka kde sa mi podarilo vybaviť pôžičku.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person1.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Klaudia R.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Pôžička schválená, dobrá voľba.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person6.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Jaroslava B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Pokazil sa nám kotol, peniaze sme vybavili jednoducho na
+                      tejto stránke. Ďakujeme
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person8.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Anna G.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Prvý krát som požiadala o pôžičku na webe, a vyšlo to.
+                      Super skúsenosť, odporúčam. Páni boli v telefóne veľmi
+                      ochotný a poradili.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person10.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Gabriela B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      O pôžičku som požiadala najskôr ja, následne manžel, obom
+                      nám pôžičku schválili.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person11.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Viera T.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Vypísala som všetky kolónky, a v priebehu dňa mi prišla
+                      odpoveď. Následne po podpise zmluvy mi poslali peniaze.
+                      Nikam som nemusela chodiť.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person13.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Zuzana M.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Určite odporúčam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+<%} else if (isBusiness) { %>
+   
+  <div class="hidden md:block w-full z-10 mt-28 bg-white mb-[-185px]">
+    <div class="bg-secondary max-h-[60px]"> <section class="relative -top-15" id="card-wrapper">
+        <div id="ReviewsWrapper" class="ReviewsWrapper">
+          <div id="ReviewsWrappered"></div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person12.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Marián K.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Rýchle a seriózne jednanie. Chválim ochotu obchodníka.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person9.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Stanislav Č.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Všetko OK.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person7.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Daniel B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Jednoduchý formulár, zmluva mi prišla poštou, peniaze už
+                      mám na účte. Ďakujem
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person5.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Oldrich B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Zmluva bola rýchlo schválená vo výške ktorú som
+                      potreboval.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person3.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">František K.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Telefonicky mi odporučili refinanc, skvelá voľba. Ďakujem
+                      za odporúčanie
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person2.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Jozef I.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Prvá stránka kde sa mi podarilo vybaviť pôžičku.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person1.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Klaudia R.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Pôžička schválená, dobrá voľba.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person6.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Jaroslava B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Pokazil sa nám kotol, peniaze sme vybavili jednoducho na
+                      tejto stránke. Ďakujeme
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person8.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Anna G.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Prvý krát som požiadala o pôžičku na webe, a vyšlo to.
+                      Super skúsenosť, odporúčam. Páni boli v telefóne veľmi
+                      ochotný a poradili.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person10.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/4:5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Gabriela B.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      O pôžičku som požiadala najskôr ja, následne manžel, obom
+                      nám pôžičku schválili.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person11.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/star-rating.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Viera T.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">
+                      Vypísala som všetky kolónky, a v priebehu dňa mi prišla
+                      odpoveď. Následne po podpise zmluvy mi poslali peniaze.
+                      Nikam som nemusela chodiť.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="pb-8">
+              <div
+                class="w-full drop-shadow-xl bg-white mr-5 rounded-lg card-bg h-min"
+              >
+                <div class="flex py-4 pl-5 items-center">
+                  <img
+                    src="/images/reviews/person13.jpg"
+                    alt=""
+                    class="w-12 rounded-[50%]"
+                  />
+                  <div class="ml-5">
+                    <img
+                      src="/images/icons/5stars.svg"
+                      alt=""
+                      class="w-[8rem]"
+                    />
+                    <h5 class="text-sm">Zuzana M.</h5>
+                  </div>
+                </div>
+                <div class="pl-5 pb-5">
+                  <hr />
+                  <div class="w-4/5">
+                    <p class="text-xs mt-2">Určite odporúčam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+      <% } else { %>
+        <div class=" md:block w-full z-10 -mt-36 bg-white">
+          <div class="">
+        <% }  %>
+     

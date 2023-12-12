@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulár</title>
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.11/flatpickr.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/849a1df6c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dropdown.min.css" />
+    <link rel="stylesheet" href="/transition.min.css" />
+    <link rel="stylesheet" href="/stylesheets/css/custom.css" />
+    <link rel="stylesheet" href="/stylesheets/output.css" />
+    <link rel="stylesheet" href="/stylesheets/css/test.css" />
+    <link rel="stylesheet" href="/stylesheets/css/customSelect.css" />
+    <link rel="stylesheet" href="/stylesheets/css/customRadio.css" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MXP9P6H");
+    </script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "396948865882842");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=396948865882842&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta
+      name="facebook-domain-verification"
+      content="muyq165bp51mtxahxjt444iszwz6ub"
+    />
+  </head>
+  <body class="font-body h-screen bg-purple flex flex-col">
+    <header class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto">
+      <div class="md:pt-[3.5rem]">
+        <nav
+          id="topFormNav"
+          class="flex flex-col md:flex-row md:items-center md:h-[64px] pt-6 md:pt-0"
+        >
+          <div class="flex justify-between items-center">
+            <a href="/"
+              ><img
+                src="/images/result.svg"
+                alt=""
+                class="w-[5rem] inline-block md:inline"
+            /></a>
+            <a href="tel:+421918709028">
+              <div
+                class="h-[46px] w-[46px] rounded-[8px] border-2 border-primary md:hidden flex items-center justify-center"
+              >
+                <img
+                  src="/images/icons/call-incoming.svg"
+                  alt=""
+                  class="w-full max-w-[20px]"
+                />
+              </div>
+            </a>
+          </div>
+          <ul
+            class="text-white flex mx-auto justify-between text-md w-full md:max-w-[35%] md:max-w-full font-semibold my-[2rem] md:my-0 text-[12px] md:text-[20px] md:leading-[23px]"
+          >
+            <% if(step === 5){ %>
+            <li
+              class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 1.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 2.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 3.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 4.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 5.
+            </li>
+            <% } %> <% if (step === 4) { %>
+            <li
+              class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 1.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 2.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 3.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 4.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 5.
+            </li>
+            <% } %> <% if (step === 3) { %>
+            <li
+              class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 1.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 2.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 3.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 4.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 5.
+            </li>
+            <% } %> <% if (step === 2){ %>
+            <li
+              class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 1.
+            </li>
+            <li
+              class="border-b-2 border-primary ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 2.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 3.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 4.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 5.
+            </li>
+
+            <% } %> <% if (step === 1){ %>
+            <li
+              class="border-b-2 border-primary md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 1.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 2.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 3.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 4.
+            </li>
+            <li
+              class="border-b-2 border-white/20 ml-4 md:ml-12 md:w-[77px] md:text-center md:pb-[0.2rem] md:leading-[23px]"
+            >
+              Krok 5.
+            </li>
+            <% } %>
+          </ul>
+          <div
+            class="w-[251px] h-[54px] border-2 border-primary rounded-lg md:flex items-center justify-center text-white text-[20px] font-bold hidden"
+          >
+            0918 709 028
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div
+      class="w-full max-w-[92%] lg:max-w-[1620px] mx-auto my-auto form-wrapper"
+    >
+      <%- body %>
+    </div>
+  </body>
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MXP9P6H"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <script src="/javascripts/handleOtherIncome.js"></script>
+  <script src="/javascripts/back.js"></script>
+  <script src="/transition.min.js"></script>
+  <script src="/dropdown.min.js"></script>
+  <script src="/javascripts/customDropdown.js"></script>
+  <script src="/javascripts/validator.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="/javascripts/flatpickr.js"></script>
+  <script src="/javascripts/formBottomNav.js"></script>
+  <script src="/javascripts/radioGroup.js"></script>
+  <script src="/javascripts/handleFileInputs.js"></script>
+</html>

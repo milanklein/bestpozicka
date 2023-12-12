@@ -1,0 +1,137 @@
+<section id="home-card-section" class="mt-[3.5rem] md:mt-28 md:mb-[9rem]">
+    <div class="container mx-auto md:grid grid-cols-2 gap-12 lg:px-[5rem]">
+        <div id="offerContentWrapper" class="mb-[2rem] md:mb-0">
+
+            <% if(!isAutouver) {%>
+            <h2 class="text-[2.5rem] md:text-[4rem] font-medium mb-[1.5rem] text-center md:text-left md:mb-[1.5rem]">Čo
+                ponúkame</h2>
+            <p class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left">
+                Bestpôžička vám pomôže získať peniaze jednoducho a rýchlo, účel použitia je už na vás! Naliehavé opravy?
+                Nákup domáceho spotrebiča? Kúpa nového vozidla? Máte na výber! Žiadosť o pôžičku nebola nikdy
+                jednoduchšia.
+            </p>
+        </div>
+        <a href="/">
+            <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] md:h-[290px] flex p-[1.5rem] md:p-0 mb-[1.5rem] md:mb-0">
+                <img src="/images/cash-bag.svg" alt="" class="w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                <div class="w-max md:flex md:flex-col md:my-auto">
+                    <div class="flex items-center">
+                        <img src="/images/cash-bag.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                        <h4 class="text-[1.75rem] md:text-[2.25rem] font-bold ml-3 md:ml-0">Pôžičky</h4>
+                    </div>
+                    <p class="font-text text-[1rem] md:text-[1rem] mt-5 md:mt-0">
+                        Pôžička s pravidelnými splátkam od 400€ do 15000€. Pôžička nie je viazaná na žiadny účel,
+                        peniaze môžete použiť na čokoľvek. Vybavenie a vedenie pôžičky je úplne zadarmo.
+                    </p>
+                </div>
+                <div class="col-span-1 h-full border-2 border-primary md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden">
+                    <i class="fa-solid fa-chevron-right px-4 text-primary"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="/dofinancovanie">
+            <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] md:h-[290px] flex p-[1.5rem] md:p-0 mb-[1.5rem] md:mb-0">
+                <img src="/images/house-icon.svg" alt=""
+                     class="md:w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                <div class="w-max md:flex md:flex-col md:my-auto">
+                    <div class="flex items-center">
+                        <img src="/images/house-icon.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                        <h4 class="text-[1.75rem] md:text-[2.25rem] leading-none mb-3 ml-3 md:ml-0 font-bold">
+                            Dofinancovanie
+                            hypotéky</h4>
+                    </div>
+                    <p class="font-text md:text-[1rem] mt-5 md:mt-0">
+                        Pôžička na dofinancovanie hypotéky je riešenie ako dofinancovať klasickú hypotéku na kúpu
+                        nehnuteľnosti. Maximálna výška pôžičky na dofinancovanie hypotéky je 100% hodnoty nehnuteľnosti.
+                    </p>
+                </div>
+                <div class="col-span-1 h-full border-2 border-dRed md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden ">
+                    <i class="fa-solid fa-chevron-right px-4 text-dRed"></i>
+                </div>
+            </div>
+        </a>
+        <a href="/refinancovanie">
+            <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] md:h-[290px] flex p-[1.5rem] md:p-0">
+                <img src="/images/loop-icon.svg" alt="" class="w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                <div class="w-max md:flex md:flex-col md:my-auto">
+                    <div class="flex items-center">
+                        <img src="/images/loop-icon.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                        <h4 class="text-[1.75rem] font-bold md:text-[2.25rem] md:leading-[39px] ml-3 md:ml-0">
+                            Refinancovanie</h4>
+                    </div>
+                    <p class="font-text md:text-[1rem] mt-5 md:mt-[1rem] md:leading-[25px]">
+                        Refinancovanie vám pomôže zbaviť sa starých dlhov a získať hotovosť navyše až do výšky 10 000 €
+                        , je už len na vás na aké dlhé obdobie si refinančný úver nastavíte.
+                    </p>
+                </div>
+                <div class="col-span-1 h-full border-2 border-orange md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden ">
+                    <i class="fa-solid fa-chevron-right px-4 text-orange"></i>
+                </div>
+            </div>
+            <% } else {%>
+                <h2 class="text-[2.5rem] md:text-[36px] font-medium mb-[1.5rem] md:leading-[40px] text-center md:text-left md:mb-[1.5rem]">Čo
+                    ponúkame</h2>
+                <p class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left">
+                    Kúpa nového vozidla? Najlacnejšie povinné poistenie? Výhodné havarijne poistenie? Nákup nového vozidla a uzatvorenie výhodného poistenia je vďaka Bestpôžičke hračka.
+                </p>
+            </div>
+            <a href="/autouver">
+                <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] lg:h-[290px] h-auto flex p-[1.5rem] md:p-0 mb-[1.5rem] md:mb-0">
+                    <img src="/images/poistenie.svg" alt="" class="w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                    <div class="w-max md:flex md:flex-col md:my-auto">
+                        <div class="flex items-center">
+                            <img src="/images/poistenie.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                            <h4 class="text-[1.75rem] md:text-[2.25rem] font-bold ml-3 md:ml-0">Poistenie vozidiel</h4>
+                        </div>
+                        <p class="font-text text-[1rem] md:text-[1rem] mt-5 md:mt-0">
+                            Bespôžička Vám ponúka najlacnejšie poistenie vozidiel (PZP) podľa vašich predstáv. Klientom ponúkame na výber porovnanie ponúk z viacerých poisťovní, finálny výber je len na Vás. Ak máte záujem o poistenie kontaktujte nás telefonicky na čísle +421 918 709 028.
+                        </p>
+                    </div>
+                    <div class="col-span-1 h-full border-2 border-primary md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden">
+                        <i class="fa-solid fa-chevron-right px-4 text-primary"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="/autouver">
+                <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] lg:h-[290px] h-auto flex p-[1.5rem] md:p-0 mb-[1.5rem] md:mb-0">
+                    <img src="/images/autouver.svg" alt=""
+                         class="md:w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                    <div class="w-max md:flex md:flex-col md:my-auto">
+                        <div class="flex items-center">
+                            <img src="/images/autouver.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                            <h4 class="text-[1.75rem] font-bold75rem] md:text-[2.25rem] leading-none mb-3 ml-3 md:ml-0 font-bold">
+                                Autoúver</h4>
+                        </div>
+                        <p class="font-text md:text-[1rem] mt-5 md:mt-0">
+                            Autoúver je skvelá cesta ako financovať nákup nového alebo jazdeného vozidla. Je len na vás či si auto kúpite od suseda, z bazáru alebo internetu. Bestpôžička vám požičia celú sumu na nákup vozidla s nulovou akontáciou.
+
+                        </p>
+                    </div>
+                    <div class="col-span-1 h-full border-2 border-dRed md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden ">
+                        <i class="fa-solid fa-chevron-right px-4 text-dRed"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="/autouver">
+                <div class="bg-white custom-shadow-15 offerContainer rounded-[10px] lg:h-[290px] h- flex p-[1.5rem] md:p-0">
+                    <img src="/images/havarijna.svg" alt="" class="w-full md:max-w-[100px] md:mx-[2rem] hidden md:block">
+                    <div class="w-max md:flex md:flex-col md:my-auto">
+                        <div class="flex items-center">
+                            <img src="/images/havarijna.svg" alt="" class="w-full max-w-[60px] md:hidden">
+                            <h4 class="text-[1.75rem] md:text-[2.25rem] md:leading-[39px] ml-3 md:ml-0">
+                                Havarijne poistenie</h4>
+                        </div>
+                        <p class="font-text md:text-[1rem] mt-5 md:mt-[1rem] md:leading-[25px]">
+                            Uzatvorte si výhodné havarijne poistenie v Bestpôžičke. Ochráňte svoje vozidlo pred poškodením z dôvodu havárie, vandalizmu, pôsobenia živlov a krádeže. Ak máte záujem o havarijne poistenie podľa vašich parametrov, kontaktujte nás telefonicky na čísle +421 918 709 028.
+                        </p>
+                    </div>
+                    <div class="col-span-1 h-full border-2 border-orange md:flex items-center ml-6 rounded-md opacity-0 offerArrow hidden ">
+                        <i class="fa-solid fa-chevron-right px-4 text-orange"></i>
+                    </div>
+                </div>
+                <% } %>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,231 @@
+<% layout('./layouts/form-boilerplate-car') %>
+<section id="step3-body" class="my-auto pb-[4.5rem] md:pb-0 md:my-[5rem] form-container">
+    <div class="md:w-1/5 form-label">
+        <p class="mb-2 mt-14 text-white hidden md:block">Vyplnenie údajov vám zaberie <span
+                    class="text-primary font-medium">menej než 4min</span></p>
+        <div class="flex md:hidden text-white items-end font-light justify-center mb-[2rem]">
+            <p class="md:hidden leading-none">Vyplnenie formuláru zaberie</p>
+            <img src="/images/clock.svg" alt="" class="w-5 mx-2">
+            <p class="text-primary leading-none">4min</p>
+        </div>
+    </div>
+    <div class="md:grid md:grid-cols-2 md:gap-24">
+        <div class="bg-white px-6 py-[3rem] md:px-0 md:py-[4rem] rounded-lg w-full md:max-w-[665px] md:flex md:justify-center">
+            <form action="/formCar/step-3" method="post" class="form w-full md:max-w-[550px] relative">
+                <%- include('../partials/form-partials/back-arrow') %>
+                <h4 class="text-[1.375rem] font-bold md:text-xl mb-4">Na akej adrese máte trvalý pobyt?</h4>
+                <div class="mb-6">
+                    <label for="personStreet" class="label-default">Ulica a popisné číslo</label>
+                    <div class="relative">
+                        <input type="text" id="personStreet" class="input-default placeholder-default validate"
+                               placeholder="Štúrová 226" name="personStreet">
+                        <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                    </div>
+                    <small class="text-xs text-dRed "></small>
+                </div>
+                <div class="grid grid-cols-7 gap-4">
+                    <div class="mb-6 col-span-4 md:col-span-5">
+                        <label for="cityCustomer" class="label-default">Obec</label>
+                        <div class="relative">
+                            <input type="text" id="cityCustomer" name="cityCustomer"
+                                   class="input-default placeholder-default validate"
+                                   placeholder="Bratislava">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
+                    </div>
+                    <div class="col-span-3 md:col-span-2">
+                        <label for="pscCustomer" class="label-default">PSČ<span
+                                    class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
+                        <div class="relative">
+                            <input type="text" id="pscCustomer" name="pscCustomer"
+                                   class="input-default placeholder-default"
+                                   placeholder="851 01">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="living" class="label-default">Typ bývania<span
+                                class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
+                    <div class="ui fluid search selection dropdown">
+                        <input type="hidden" name="housing">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Bývam v podnájme</div>
+                        <div class="menu">
+                            <div class="item" data-value="house">Vlastný byt/dom</div>
+                            <div class="item" data-value="cooperative-house">Družstvený byt</div>
+                            <div class="item" data-value="parents">Bývanie u rodičov/u detí</div>
+                            <div class="item" data-value="rent">Nájomné bývanie</div>
+                            <div class="item" data-value="other">Iné</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-12 flex items-center">
+                    <div class="h-[24px] w-full max-w-[24px] border-2 rounded-[5px] border-secondary cursor-pointer flex checkbox-container items-center justify-center">
+                        <img src="/images/icons/check.svg" alt="" class="mb-[0.2rem] checkbox-check invisible w-[14px]">
+                    </div>
+                    <p class="text-[0.85rem] md:text-[1.25rem] md:leading-[23px] ml-2 md:ml-4 md:flex md:items-center">
+                        Poštu chcem dostávať na
+                        inú adresu<span
+                                class="text-[0.625rem] my-auto md:my-0 text-secondary/50 md:leading-[20px] md:ml-[0.25rem] block md:flex md:items-center"><span
+                                    class="hidden md:block md:mr-[0.25rem]">-</span> Nepovinné</span></p>
+                </div>
+                <div class="hidden mb-12" id="post-container">
+                    <h4 class="text-[1.375rem] md:text-xl mb-2 md:mb-4 font-bold">Kde ti budeme posielať poštu?</h4>
+                    <div class="mb-6">
+                        <label for="postStreet" class="label-default">Ulica a popisné číslo<span
+                                    class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
+                        <div class="relative">
+                            <input type="text" id="postStreet" class="input-default placeholder-default"
+                                   placeholder="Štúrová 226" name="postStreet">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed"></small>
+                    </div>
+                    <div class="grid grid-cols-7 gap-4">
+                        <div class=" col-span-4 md:col-span-5">
+                            <label for="postCity" class="label-default">Obec <span
+                                        class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label></label>
+                            <div class="relative">
+                                <input type="text" id="postCity" name="postCity"
+                                       class="input-default placeholder-default"
+                                       placeholder="Bratislava">
+                                <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                            </div>
+                            <small class="text-xs text-dRed "></small>
+                        </div>
+                        <div class="col-span-3 md:col-span-2">
+                            <label for="postPsc" class="label-default">PSČ<span
+                                        class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
+                            <div class="relative">
+                                <input type="text" id="postPsc" name="postPsc"
+                                       class="input-default placeholder-default"
+                                       placeholder="851 01">
+                                <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                            </div>
+                            <small class="text-xs text-dRed "></small>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="text-[1.375rem] md:text-xl mb-2 md:mb-4 font-bold">Pár detailov na koniec</h4>
+                <div>
+                    <div class="mb-6">
+                        <label for="motherSurname" class="label-default">Rodné priezvisko matky<span
+                                    class="text-[0.625rem] my-auto text-secondary/50 md:leading-[20px] ml-1">- Nepovinné</span></label>
+                        <div class="relative">
+                            <input type="text" id="motherSurname" class="input-default placeholder-default"
+                                   placeholder="Bestová" name="motherSurname">
+                            <i class="fa-solid fa-1x fa-xmark text-transparent text-dRed"></i>
+                        </div>
+                        <small class="text-xs text-dRed "></small>
+                    </div>
+                </div>
+                <button class="md:ml-[6rem] submit-button border-2 border-dRed rounded-lg text-black/50 w-full max-w-[149px] md:max-w-[175px] h-[48px] md:h-[54px] flex items-center justify-center text-[1.125rem] md:text-[20px] font-bold mx-auto md:mx-0 default-transition">
+                    <span>Ďalej </span>
+                </button>
+            </form>
+        </div>
+        <div class="translate-y-[560px] md:translate-y-0 bottom-nav bottom-nav-fixed bottom-nav-container md:h-[45rem]">
+            <div class="md:hidden buttonContainer">
+                <div class="bg-transparent">
+                    <img src="/images/icons/mobile-up.svg" alt=""
+                         class="w-full max-w-[59px] mx-auto cursor-pointer translate-y-[70%] bottom-nav-button">
+                </div>
+                <div class="flex flex-col h-[54px] rounded-t-[10px] bg-purple">
+                    <div class="m-auto z-40">
+                        <span class="font-light leading-[17px] text-[1.125rem]">Tebou vyplnené údaje</span>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[560px] md:h-full bg-purple">
+                <div class="overflow-y-auto pt-[1.5rem] md:pt-0 w-full max-w-[80%] md:max-w-full h-[490px] md:h-min mx-auto border-t md:border-0 border-white/20 flex flex-col">
+                    <h2 class="form-heading1 ">Máš záujem o</h2>
+                    <div class="w-full md:max-w-[425px] mb-[1.5rem] md:mb-[2rem]">
+                    <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">autoúver <span
+                                class="text-primary"><%= sessionData.calcData.money %>
+                        </span></span>
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">s dobou splácania <span
+                                    class="text-primary"><%= sessionData.calcData.years %></span></span>
+                        <span class="lg:text-[1.7rem] lg:block leading-[22px] md:leading-[36px]">a mesačnou splátkou <span
+                                    class="text-primary"><%= sessionData.calcData.interest %> €</span></span>
+                    </div>
+                    <h3 class="text-[2rem] md:text-[2.5rem] mb-4">Osobné údaje</h3>
+                    <div class="md:text-[1.25rem] ">
+                        <div class="mb-2 flex items-center">
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
+                            <div>
+                                Volám sa <span
+                                        class="text-primary"> <%= sessionData.contact.fName %>
+                                    <%= sessionData.contact.lName %></span>
+                            </div>
+                        </div>
+                        <div class="mb-2 flex items-center">
+                            <i class="fa-solid fa-minus mr-2 md:mr-3"></i>
+                            <div>
+                                Moje rodné číslo je <span
+                                        class="text-primary"><%= sessionData.contact.bNumber %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mb-2 flex w-full md:max-w-[330px]">
+                            <i class="fa-solid fa-minus pt-1 mr-2 md:mr-3"></i>
+                            <div class="md:leading-[31px]">
+                                Číslo môjho občianskeho preukazu je <span
+                                        class="text-primary"><%= sessionData.contact.id %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex md:leading-[31px] w-full md:max-w-[495px] mb-[1.5rem] md:mb-[2rem]">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div>
+                                Možno ma kontaktovať na čísle <span
+                                        class="text-primary"><%= sessionData.contact.phoneNum %>
+                                </span>, alebo emailom
+                                <span class="text-primary"><%= sessionData.contact.email %></span>
+                            </div>
+                        </div>
+                        <h3 class="text-[2rem] md:text-[2.5rem] mb-4 md:leading-[44px]">Finančné údaje</h3>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[315px]">
+                                Som zamestnaný v <span
+                                        class="text-primary"><%= sessionData.companyData.companyName %>
+                                </span>
+                                IČO: <span class="text-primary"><%= sessionData.companyData.ico %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[340px]">
+                                Zamestnaný som na <span
+                                        class="text-primary">dobu <%= sessionData.companyData.period %></span>
+                                <% if (sessionData.companyData.period === 'určitú') { %>
+                                    <% if (sessionData.companyData.from || sessionData.companyData.till){ %>
+                                        od <span class="text-primary"><%= sessionData.companyData.from %>
+                                 </span>
+                                        do <span class="text-primary"><%= sessionData.companyData.till %>
+                                </span>
+                                    <% } %>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="flex md:mb-2">
+                            <i class="fa-solid fa-minus md:mr-3 mr-2 pt-1"></i>
+                            <div class="md:text-[1.25rem] md:leading-[31px] w-full md:max-w-[480px]">
+                                Môj čistý mesačný príjem za 1.mesiac je <span
+                                        class="text-primary"><%= sessionData.companyData.firstMonth %>€</span>,
+                                za 2.mesiac je <span
+                                        class="text-primary"><%= sessionData.companyData.secondMonth %>€</span>, za
+                                3.mesiac je <span class="text-primary"><%= sessionData.companyData.thirdMonth %>€</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

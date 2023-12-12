@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/849a1df6c9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/css/custom.css" />
+    <link rel="stylesheet" href="/stylesheets/output.css" />
+
+    <link rel="stylesheet" href="/stylesheets/css/rangeInput.css" />
+    <link rel="stylesheet" href="/stylesheets/css/test.css" />
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MXP9P6H");
+    </script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "396948865882842");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=396948865882842&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta
+      name="facebook-domain-verification"
+      content="muyq165bp51mtxahxjt444iszwz6ub"
+    />
+  </head>
+  <body class="font-body text-secondary">
+   
+    <% if (!isRefinancovanie && !isAutouver && home) { %> 
+    <div class="bg-christmas md:pb-[1rem]"> 
+      <% } else if (!isRefinancovanie && !home && isAutouver) { %><div class="bg-purple md:pb-[1rem]"> <% } else {%>
+        <div class="bg-secondary md:pb-[1rem]"> 
+      <% }%>
+      <header
+        class="max-w-[92%] w-full pt-6 xl::pt-[4.75rem]  xl::max-w-[1620px] mx-auto"
+      >
+        <%- include('../partials/navbar')%>
+      </header>
+    </div>
+    <!--Content from other .ejs files-->
+    <%- body %> <%- include('../partials/footer')%>
+  </body>
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MXP9P6H"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <script>
+    const body = document.querySelector("body");
+    const html = document.querySelector("html");
+    const nav = document.querySelector("nav");
+    const content = document.querySelector(".nav-content");
+    const container = content.parentElement;
+    const logo = document.querySelector("#logo");
+    const hamburger = document.querySelector(".nav-hamburger");
+    const pozicat = document.querySelector("#pozicat-button");
+
+    hamburger.addEventListener("click", () => {
+      console.log("hehe");
+      content.classList.toggle("translate-x-full");
+      html.classList.toggle("nav-active");
+    });
+    pozicat.addEventListener("click", () => {
+      content.classList.toggle("translate-x-full");
+      body.classList.remove("overflow-y-hidden");
+      html.classList.remove("overflow-y-hidden");
+    });
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(function () {
+      $('a[href*="#"]:not([href="#"])').click(function () {
+        if (
+          location.pathname.replace(/^\//, "") ==
+            this.pathname.replace(/^\//, "") &&
+          location.hostname == this.hostname
+        ) {
+          var target = $(this.hash);
+          target = target.length
+            ? target
+            : $("[name=" + this.hash.slice(1) + "]");
+          if (target.length) {
+            $("html, body").animate(
+              {
+                scrollTop: target.offset().top,
+              },
+              50
+            );
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+  <!--<script src="/javascripts/RefinancovanieCalculator.js"></script>-->
+  <script src="/javascripts/bundle.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/javascripts/swiper.js"></script>
+  <script src="/javascripts/calculator.js"></script>
+  <script src="/javascripts/autoReviews.js"></script>
+  <script src="/javascripts/validator.js"></script>
+  <script src="/javascripts/scripts.js"></script>
+</html>

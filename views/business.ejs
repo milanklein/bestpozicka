@@ -1,0 +1,120 @@
+<% layout('./layouts/boilerplate') %> <%- include('./partials/calculator')%>
+
+<!-- Slider main container -->
+
+<section class="bg-white autouver">
+  <div class="autouver_div1">
+    <h2
+      class="text-[2.5rem] md:text-[36px] leading-[40px] font-medium mb-[1.5rem] text-center md:text-left md:mb-[1.5rem]"
+    >
+      Autoúver je vhodný pre vás ak:
+    </h2>
+    <div class="business_p">
+      <img src="/images/success-green.svg" alt="" />
+      <p
+        class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left"
+      >
+        Intenzívne uvažujete o kúpe nového alebo jazdeného vozidla.
+      </p>
+    </div>
+    <div class="business_p">
+      <img src="/images/success-green.svg" alt="" />
+      <p
+        class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left"
+      >
+        Ak máte vozidlo už vybrané, ale potrebujete doriešiť financovanie.
+      </p>
+    </div>
+    <div class="business_p">
+      <img src="/images/success-green.svg" alt="" />
+      <p
+        class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left"
+      >
+        Si chcete nechať auto doviezť zo zahraničia.
+      </p>
+    </div>
+    <div class="business_p">
+      <img src="/images/success-green.svg" alt="" />
+      <p
+        class="font-text mx-[1rem] md:mx-[0] md:text-[20px] md:leading-[30px] md:max-w-[575px] text-center md:text-left"
+      >
+        Nechcete kupovať auto od predávajúceho či bazáru na leasing.
+      </p>
+    </div>
+  </div>
+  <div class="autouver_div2">
+    <img class="front-img" src="/images/business_group.svg" alt="" />
+  </div>
+</section>
+<%- include('./partials/business-loan')%>
+<div class="translate-y-1/2 mt-[-50%] md:mt-[0] relative z-10">
+  <%- include('./partials/calcAd')%>
+</div>
+<section
+  class="text-white bg-secondary pt-[16rem] md:pt-[14rem] pb-[1.5rem]"
+  id="home-about"
+>
+  <div class="lg:px-[5rem] container bg-secondary md:grid grid-cols-10">
+    <div id="aboutusBg" class="flex flex-col justify-between col-span-4">
+      <div class="bg-purplemd:pr-20 px-2 md:px-0">
+        <h2
+          class="text-[2.5rem] md:text-[2.25rem] mb-3 text-center md:text-left"
+        >
+          O nás
+        </h2>
+        <p class="text-[16px] mb-[2rem] font-text text-center md:text-left">
+          Máme dlhoročné skúsenosti v oblasti poskytovania úverov, našou víziou
+          je prinášať klientom jednoduchú cestu k peniazom. Chápeme potrebám
+          klientov a preto im dávame na výber rýchlu možnosť požiadania o
+          pôžičku online alebo osobne u nás v centrále.
+        </p>
+        <p class="text-[16px] mb-[2rem] font-text text-center md:text-left">
+          Poskytneme Vám kompletný servis od žiadosti o pôžičku až po jej
+          schválenie.
+        </p>
+        <p class="text-[16px] mb-7 font-text text-center md:text-left">
+          Čo je pre nás dôležité?<br />
+          <span class="text-primary font-bold">Spokojní zákazníci!</span>
+        </p>
+      </div>
+      <a
+        href="#zistit-button-receiver"
+        class="border-2 border-primary rounded-lg h-[45px] w-[192px] flex justify-center items-center mx-auto md:mx-0 mb-[2rem] md:mb-0 yellow-border-button"
+      >
+        <span>Zistiť viac</span>
+      </a>
+    </div>
+    <div class="col-span-6 flex items-center justify-end">
+      <img
+        src="/images/aboutUs-people.png"
+        alt=""
+        class="w-ful custom-shadow-10"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+<section id="homeAdCardsAuto" class="bg-secondary">
+  <%- include('./partials/ad-cards')%>
+</section>
+<section class="bg-secondary text-white md:pb-[3.5rem]">
+  <div class="flex justify-center" id="find-out-more-section-car">
+    <a
+      href=""
+      class="border-2 border-primary rounded-lg h-[45px] w-[192px] flex justify-center items-center yellow-border-button"
+    >
+      <span>Zistiť viac</span>
+    </a>
+  </div>
+</section>
+<section>
+  <div class="text-[37px] md:text-[42px] business-card">
+    <h1 class="font-bold">Objavte Bestpôžičku</h1>
+    <h2>Všetko online. Všetko jednoduché.</h2>
+  </div>
+</section>
+<%- include('./partials/reviews')%>
+
+<!--Pozadie na kalkulackach-->
+<%- include('./partials/calcAd')%> <%- include('./partials/faq')%> <%-
+include('./partials/contactForm')%>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Požiadavka prijatá - Best Pôžička</title>
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/output.css">
+    <link rel="stylesheet" href="/stylesheets/css/custom.css">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MXP9P6H');</script>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '396948865882842');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                     src="https://www.facebook.com/tr?id=396948865882842&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta name="facebook-domain-verification" content="muyq165bp51mtxahxjt444iszwz6ub" />
+</head>
+<body class="bg-secondary font-body h-screen flex flex-col  text-white">
+<div class="container pt-6 md:hidden mb-[5rem]">
+    <%-include('../partials/navbar')%>
+</div>
+<header class="hidden md:block pt-16 w-full max-w-[88%] mx-auto">
+    <nav class="flex items-center">
+        <div>
+            <a href="/">
+                <img src="/images/result.svg" alt="" class="w-28">
+            </a>
+        </div>
+        <div class="ml-auto w-[15%]">
+            <a href="/"
+               class="bg-dRed rounded-lg w-full h-[54px] flex justify-center items-center text-[1.25rem] font-bold">
+                <span>Späť na stránku</span>
+            </a>
+        </div>
+    </nav>
+</header>
+<div class="dakujeme my-auto" id="main">
+    <main class="flex flex-col md:grid grid-cols-2 w-full max-w-[88%] mx-auto">
+        <div class="flex flex-col md:justify-center">
+            <div class="md:w-3/4">
+                <h1 class="text-[35px] leading-[42px] md:leading-[72px] md:text-[3.75rem] mb-[1rem] md:mb-7"><span class="text-primary">Ďakujeme</span> za prejavenú dôveru</h1>
+                <p class="leading-tight text-[16px] md:text-[1.2rem] font-light">Vaša požiadavka bola odoslaná na spracovanie, hneď po vybavení vás bude kontaktovať tím bestpôžičky. </p>
+            </div>
+        </div>
+        <div class="w-full flex flex-col items-center md:grid grid-cols-11 md:-ml-24 mt-[3rem]" id="dakujeme-images">
+            <div class="col-span-6">
+                <img src="/images/adrian-bg-y.png" alt="" class="md:object-contain md:max-w-full hidden md:block w-full max-w-[275px]">
+                <img src="/images/kontakt-kontaktujte/mobile-person1.png" alt="" class="md:hidden w-full max-w-[275px]">
+            </div>
+            <div class="col-span-5">
+                <img src="/images/anton-bg-y.png" alt="" class="md:object-contain md:max-w-full hidden md:block w-full max-w-[275px]">
+                <img src="/images/kontakt-kontaktujte/mobile-person2.png" alt="" class="md:hidden w-full max-w-[275px] pb-[4rem]">
+            </div>
+        </div>
+        <a href="/"
+           class="bg-dRed rounded-lg w-full mx-auto max-w-[235px] h-[54px] flex justify-center items-center text-[18px] leading-[20px] font-bold md:hidden my-[5rem]">
+            <span>Späť na stránku</span>
+        </a>
+    </main>
+</div>
+</body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXP9P6H"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</html>
+<script src="/javascripts/scripts.js"></script>
+<script>
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
+    const nav = document.querySelector('nav')
+    const content = document.querySelector('.nav-content');
+    const container = content.parentElement
+    const logo = document.querySelector('#logo');
+    const hamburger = document.querySelector('.nav-hamburger')
+    const pozicat = document.querySelector('#pozicat-button')
+
+    hamburger.addEventListener('click', () => {
+        content.classList.toggle('translate-x-full')
+        html.classList.toggle('nav-active')
+    })
+    pozicat.addEventListener('click', () => {
+        content.classList.toggle('translate-x-full')
+        body.classList.remove('overflow-y-hidden')
+        html.classList.remove('overflow-y-hidden')
+    })
+
+</script>
